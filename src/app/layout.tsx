@@ -18,7 +18,7 @@ const sourceSans = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: "Darshan 360 | Walk Through Living History",
-  description: "Experience India's heritage through stories. Your personal guide to Gwalior Fort and Orchha.",
+  description: "AI-powered heritage tourism for Gwalior Fort and Orchha with storytelling, cultural insights, and itinerary planning.",
 };
 
 export default function RootLayout({
@@ -31,7 +31,7 @@ export default function RootLayout({
       <head>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
       </head>
-      <body className="antialiased">
+      <body className="antialiased font-[family-name:var(--font-source-sans)]">
         <AOSInit />
         <Navbar />
         <main>

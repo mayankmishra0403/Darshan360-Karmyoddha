@@ -7,6 +7,7 @@ import { useState } from 'react';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/explore', label: 'Explore' },
+  { href: '/ai', label: 'AI Assistant' },
   { href: '/planner', label: 'Plan Your Visit' },
 ];
 
@@ -16,16 +17,16 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F5EFE6]/95 backdrop-blur-sm border-b border-[#E5DCD0]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
           <Link 
             href="/" 
-            className="font-['Playfair_Display'] text-xl sm:text-2xl font-semibold text-[#2D2420] tracking-wide"
+            className="font-['Playfair_Display'] text-2xl font-semibold text-[#2D2420] tracking-wide"
           >
             <span className="text-[#7A1F1F]">Darshan</span> 360 
           </Link>
 
-          <div className="hidden md:flex items-center gap-8 lg:gap-10">
+          <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -50,7 +51,7 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <svg
-              className="w-5 h-5 sm:w-6 sm:h-6"
+              className="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -77,7 +78,7 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="md:hidden border-t border-[#E5DCD0] bg-[#F5EFE6]">
-          <div className="px-4 sm:px-6 py-3 space-y-2">
+          <div className="px-6 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
