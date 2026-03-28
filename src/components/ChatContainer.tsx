@@ -87,7 +87,7 @@ export default function ChatContainer({ slug }: ChatContainerProps) {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-80px)] bg-[#F5EFE6]">
+    <div className="flex flex-col h-[calc(100vh-56px)] sm:h-[calc(100vh-80px)] bg-[#F5EFE6]">
       <ToggleBar
         mode={mode}
         audience={audience}
@@ -95,7 +95,7 @@ export default function ChatContainer({ slug }: ChatContainerProps) {
         onAudienceChange={setAudience}
       />
 
-      <div className="flex-1 overflow-y-auto p-6 space-y-6">
+      <div className="flex-1 overflow-y-auto p-3 sm:p-6 space-y-4 sm:space-y-6">
         {messages.map((message) => (
           <ChatMessage key={message.id} message={message} />
         ))}

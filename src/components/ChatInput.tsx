@@ -34,13 +34,13 @@ export default function ChatInput({ onSend, disabled }: ChatInputProps) {
     
     if (textareaRef.current) {
       textareaRef.current.style.height = 'auto';
-      textareaRef.current.style.height = `${Math.min(textareaRef.current.scrollHeight, 120)}px`;
+      textareaRef.current.style.height = `${Math.min(textareaRef.current.scrollHeight, 100)}px`;
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="border-t border-[#E5DCD0] p-5 bg-[#FFFBF5]">
-      <div className="flex gap-4 items-end max-w-4xl mx-auto">
+    <form onSubmit={handleSubmit} className="border-t border-[#E5DCD0] p-3 sm:p-5 bg-[#FFFBF5]">
+      <div className="flex gap-2 sm:gap-4 items-end max-w-4xl mx-auto">
         <div className="flex-1 relative">
           <textarea
             ref={textareaRef}
@@ -50,15 +50,15 @@ export default function ChatInput({ onSend, disabled }: ChatInputProps) {
             placeholder="Ask your guide..."
             disabled={disabled}
             rows={1}
-            className="w-full px-5 py-4 pr-14 bg-[#F5EFE6] border border-[#E5DCD0] rounded-2xl resize-none focus:outline-none focus:border-[#C8A96A] focus:ring-2 focus:ring-[#C8A96A]/20 transition-all disabled:opacity-50 text-[#2D2420] placeholder:text-[#8B7B70]"
+            className="w-full px-4 sm:px-5 py-3 sm:py-4 pr-10 sm:pr-14 bg-[#F5EFE6] border border-[#E5DCD0] rounded-xl sm:rounded-2xl resize-none focus:outline-none focus:border-[#C8A96A] focus:ring-2 focus:ring-[#C8A96A]/20 transition-all disabled:opacity-50 text-sm sm:text-base text-[#2D2420] placeholder:text-[#8B7B70]"
           />
         </div>
         <button
           type="submit"
           disabled={!message.trim() || disabled}
-          className="flex-shrink-0 p-4 bg-[#7A1F1F] text-white rounded-full hover:bg-[#9A3535] disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-300 hover:shadow-lg"
+          className="flex-shrink-0 p-3 sm:p-4 bg-[#7A1F1F] text-white rounded-full hover:bg-[#9A3535] disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-300 hover:shadow-lg"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
           </svg>
         </button>
