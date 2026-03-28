@@ -1,4 +1,4 @@
-export type Location = 'gwalior' | 'orchha' | 'iskcon-bangalore' | 'golden-temple' | 'tirumala' | 'jagannath-puri' | 'kashi-vishwanath' | 'somnath';
+export type Location = 'gwalior' | 'orchha';
 
 export interface GalleryImage {
   src: string;
@@ -15,10 +15,6 @@ export interface DestinationContent {
   keyAttractions: string[];
   bestTimeToVisit: string;
   gallery: GalleryImage[];
-  isTemple?: boolean;
-  deity?: string;
-  timing?: string;
-  entryFee?: string;
 }
 
 export interface CulturalHighlight {

@@ -2,8 +2,11 @@
 
 import Hero from '@/components/Hero';
 import Link from 'next/link';
-import ExploreSection from '@/sections/ExploreSection';
+import FeaturedDestinations from '@/sections/FeaturedDestinations';
 import CultureSection from '@/sections/CultureSection';
+import WhyDarshan360 from '@/sections/WhyDarshan360';
+import Testimonials from '@/sections/Testimonials';
+import Footer from '@/components/Footer';
 
 export default function HomePage() {
   return (
@@ -16,10 +19,14 @@ export default function HomePage() {
       />
 
       <div id="featured-destinations">
-        <ExploreSection />
+        <FeaturedDestinations />
       </div>
 
-      <section className="bg-[#7A1C1C] py-20 text-white">
+      <CultureSection />
+
+      <WhyDarshan360 />
+
+      <section className="bg-[#7A1F1F] py-20 text-white">
         <div className="mx-auto max-w-5xl px-6 text-center" data-aos="fade-up">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#E6C98B]">AI Assistant Preview</p>
           <h2 className="mt-3 font-['Playfair_Display'] text-4xl">Your Personal Heritage Guide</h2>
@@ -36,7 +43,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CultureSection />
+      <Testimonials />
+
+      <Footer />
     </div>
   );
 }

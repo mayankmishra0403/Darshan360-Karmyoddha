@@ -31,7 +31,7 @@ export default async function SitePage({ params }: SitePageProps) {
         <div className="absolute bottom-0 left-0 right-0 p-8 sm:p-12">
           <div className="max-w-4xl mx-auto">
             <span className="text-[#C8A96A] text-sm font-medium tracking-widest uppercase animate-fade-down">
-              {site.isTemple ? 'Sacred Temple' : 'Heritage Site'}
+              Heritage Site
             </span>
             <h1 className="font-['Playfair_Display'] text-5xl sm:text-6xl text-white mt-3 mb-4 animate-fade-up">
               {site.name}
